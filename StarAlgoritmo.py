@@ -60,7 +60,7 @@ def astar(m, start, goal):
     # Retorna o caminho encontrado
     return path
 
-def StarAlgoritimo(m, RANDOM_X_COMECO, RANDOM_Y_COMECO, RANDOM_X_FIM, RANDOM_Y_FIM):
+def StarAlgoritmo(m, RANDOM_X_COMECO, RANDOM_Y_COMECO, RANDOM_X_FIM, RANDOM_Y_FIM):
     # Define a posição de início e o objetivo
 
     start = (RANDOM_X_COMECO, RANDOM_Y_COMECO)
