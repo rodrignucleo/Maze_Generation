@@ -1,7 +1,6 @@
 import random
 from pyamaze import maze, agent, textLabel, COLOR
 from StarAlgoritimo import StarAlgoritimo
-# import pandas as pd
 import openpyxl
 
 def GerarLabirinto(LARGURA_LABIRINTO, ALTURA_LABIRINTO):
