@@ -83,6 +83,7 @@ def DFS(m, start=None, goal=None):
 
 if __name__=='__main__':
    
+    
     # Solicita a largura e altura do labirinto ao usuário por meio do terminal e converte as entradas em inteiros
     LARGURA_LABIRINTO = int(input("Digite a largura do labirinto: "))
     ALTURA_LABIRINTO = int(input("Digite a altura do labirinto: "))
@@ -125,11 +126,8 @@ if __name__=='__main__':
     # Fn=textLabel(m,FimCom, FimLar)
     
     # Abre o arquivo de planilha do Excel (se existir) ou cria um novo arquivo se ele não existir
-    # workbook = openpyxl.Workbook()
-
     workbook = openpyxl.load_workbook("labirinto.xlsx")
-    
-    
+   
     worksheet = workbook.active
 
     # Escreve os títulos das colunas
