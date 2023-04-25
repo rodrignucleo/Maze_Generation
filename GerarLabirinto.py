@@ -26,7 +26,7 @@ def GerarLabirinto(LARGURA_LABIRINTO, ALTURA_LABIRINTO):
     # Uma caixa de mensagem com a quantidade de passos dados
     l = textLabel(labirinto, 'Passos dados: ', len(path))
 
-    # Abre o arquivo de planilha do Excel (se existir) ou cria um novo arquivo se ele não existir
+    # Abre o arquivo de planilha do Excel (se existir)
     workbook = openpyxl.load_workbook("labirinto_star_algoritmo.xlsx")
 
     # workbook = openpyxl.Workbook()
