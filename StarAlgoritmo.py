@@ -4,7 +4,7 @@ def h(a, b):
     # Heurística de distância de Manhattan
     return abs(b[0] - a[0]) + abs(b[1] - a[1])
 
-def astar(m, start, goal):
+def StarAlgoritmo(m, start, goal):
     # Define as pontuações iniciais de g e f para cada célula
     g_score = {cell: float('inf') for cell in m.grid}
     g_score[start] = 0
@@ -56,21 +56,6 @@ def astar(m, start, goal):
         cell = came_from[cell]
     path.append(start)
     path.reverse()
-
-    # Retorna o caminho encontrado
-    return path
-
-def StarAlgoritmo(m, RANDOM_X_COMECO, RANDOM_Y_COMECO, RANDOM_X_FIM, RANDOM_Y_FIM):
-    # Define a posição de início e o objetivo
-
-    start = (RANDOM_X_COMECO, RANDOM_Y_COMECO)
-    goal = (RANDOM_X_FIM, RANDOM_Y_FIM)
-
-    print('Posicao Inicial:', RANDOM_X_COMECO, 'x', RANDOM_Y_COMECO)
-    print('Posicao Final:', RANDOM_X_FIM, 'x', RANDOM_Y_FIM)
-
-    # Executa o algoritmo A* para encontrar o caminho
-    path = astar(m, start, goal)
 
     # Retorna o caminho encontrado
     return path

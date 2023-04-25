@@ -1,7 +1,8 @@
 import random
 from pyamaze import maze, agent, textLabel, COLOR
-from StarAlgoritmo import StarAlgoritmo
 import openpyxl
+
+from PosicoesLabirinto import PosicoesLabirinto
 
 def GerarLabirinto(LARGURA_LABIRINTO, ALTURA_LABIRINTO):
     labirinto = maze(LARGURA_LABIRINTO, ALTURA_LABIRINTO)
@@ -15,7 +16,7 @@ def GerarLabirinto(LARGURA_LABIRINTO, ALTURA_LABIRINTO):
 
     labirinto.CreateMaze(RANDOM_X_FIM, RANDOM_Y_FIM, loopPercent=10)
 
-    path = StarAlgoritmo(labirinto, RANDOM_X_COMECO, RANDOM_Y_COMECO, RANDOM_X_FIM, RANDOM_Y_FIM)
+    path = PosicoesLabirinto(labirinto, RANDOM_X_COMECO, RANDOM_Y_COMECO, RANDOM_X_FIM, RANDOM_Y_FIM)
 
     # Cria um objeto para mostrar o trajeto/passos feitos
     passos = agent(labirinto, x=RANDOM_X_COMECO, y=RANDOM_Y_COMECO, shape='arrow', footprints=True)
